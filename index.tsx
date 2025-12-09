@@ -1,15 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
+// This file acts as a bridge to expose the environment variables to the Python runtime.
+// The main application logic has been migrated to Python in index.html.
+
+try {
+  // Expose the API Key to the global window object for PyScript access
+  (window as any).API_KEY = process.env.API_KEY;
+  console.log("Python environment initialized: API Key bridged.");
+} catch (e) {
+  console.error("Failed to bridge API Key:", e);
 }
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
