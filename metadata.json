@@ -1,5 +1,5 @@
 {
-  "name": "Copy of Student Performance Analytics",
-  "description": "An analytical tool for predicting student academic outcomes based on behavioral and demographic metrics.",
+  "name": "Student Performance Analytics",
+  "description": "Analytical tool to predict student academic results based on behavioral and demographic metrics.",
   "requestFramePermissions": []
 }
